@@ -1,13 +1,24 @@
-package com.example.demo.controller;
+// src/main/java/com/example/demo/DemoApplication.java
 
-import org.springframework.web.bind.annotation.RestController;
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
-public class HomeController {
+@SpringBootApplication
+public class DemoApplication {
 
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello, World!";
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+    @Controller
+    public class HomeController {
+        @GetMapping("/")
+        public String home() {
+            return "home";
+        }
     }
 }
