@@ -1,0 +1,27 @@
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Maven build output
+/target/
+
+# Eclipse project files
+/.settings/
+/.classpath
+/.project
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Java class files
+*.class
+
+# Spring Boot specific files
+*.jar
+*.war
+

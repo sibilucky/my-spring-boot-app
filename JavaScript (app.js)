@@ -1,0 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("JavaScript is loaded and working!");
+});
+
+function greetUser() {
+    alert("Hello, welcome to our website!");
+}
