@@ -59,7 +59,7 @@ node {
             sh """
                 #!/bin/bash
                 docker build -t my-spring-boot-app:latest .
-                docker run -d -p 8081:8080 my-spring-boot-app:latest
+                docker run -d -p 8081:8081 my-spring-boot-app:latest
             """
         }
     } catch (Exception e) {
