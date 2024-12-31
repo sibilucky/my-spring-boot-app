@@ -1,11 +1,41 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>My Spring Boot App</title>
-    <link rel="stylesheet" href="@{/css/styles.css}" />
+    <meta charset="utf-8">
+    <title></title> 
+    <meta name="description" content=""> 
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <!-- Link to external stylesheets -->
+    <link rel="stylesheet" href="styles/vendor.2ac5f564.css"> 
+    <link rel="stylesheet" href="styles/app.d41d8cd9.css"> 
+
+    <!-- Angular-specific styles (cloak behavior) -->
+    <style type="text/css">
+        @charset "UTF-8";
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+        ng\:form {
+            display: block;
+        }
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+        .ng-anchor {
+            position: absolute;
+        }
+
+        /* Custom CSS for hiding specific elements */
+        a.instance-link.ng-scope {
+            display: none;
+        }
+
+        /* Hiding body content initially (typically for loading) */
+        body {
+            display: none !important;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to My Spring Boot App</h1>
-    <p>This is a sample page with CSS applied.</p>
+    <!-- Your body content goes here -->
 </body>
-</html>
