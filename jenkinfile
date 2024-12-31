@@ -31,18 +31,18 @@ node {
         // Build the project
         stage('Build') {
             echo 'Building the project using Maven'
-            sh './mvnw clean install -DskipTests'
+            sh 'mvn clean install -DskipTests'
         }
 
         // Test the project
         stage('Test') {
             echo 'Running unit tests'
-            sh './mvnw test'
+            sh 'mvn test'
         }
 
         stage('Package') {
             echo 'Packaging the Spring Boot application into a JAR...'
-            sh './mvnw package'
+            sh 'mvn package'
         }
 
         // Docker Login
