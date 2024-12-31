@@ -19,13 +19,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.0</version> <!-- Use the latest stable version -->
+        <version>2.7.6</version> <!-- Use the latest stable version -->
         <relativePath/> <!-- Lookup parent from repository -->
     </parent>
 
     <!-- Properties for Maven build -->
     <properties>
-        <java.version>11</java.version> <!-- Specify your Java version -->
+        <java.version>11</java.version> <!-- Or 17 for Spring Boot 3.x -->
     </properties>
 
     <!-- Dependencies section -->
@@ -48,6 +48,13 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- Spring Boot Starter Test (optional for testing) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <!-- Build section (Optional, but commonly used for Spring Boot applications) -->
@@ -60,6 +67,5 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
 
