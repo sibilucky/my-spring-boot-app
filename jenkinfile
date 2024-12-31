@@ -58,8 +58,8 @@ node {
             echo "Deploying Docker container with tag: ${tag}"
             sh """
                 #!/bin/bash
-                docker build -t dockerapp:${tag} .
-                docker run -d -p 8081:8080 dockerapp:${tag}
+                docker build -t my-spring-boot-app:latest .
+                docker run -d -p 8081:8080 my-spring-boot-app:latest
             """
         }
     } catch (Exception e) {
