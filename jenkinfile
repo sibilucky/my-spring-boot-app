@@ -3,7 +3,7 @@ node {
     def repository = input(
         message: 'Select the Git repository URL',
         parameters: [
-            choice(name: 'REPOSITORY', choices: ['https://github.com/sibilucky/project2.git'], description: 'Select the Git repository URL')
+            choice(name: 'REPOSITORY', choices: ['https://github.com/sibilucky/my-spring-boot-app.git'], description: 'Select the Git repository URL')
         ]
     )
 
@@ -24,8 +24,8 @@ node {
     try {
         // Checkout code from Git
         stage('Checkout') {
-            echo "Checking out code from repository: https://github.com/sibilucky/project2.git, branch: main"
-            git url: 'https://github.com/sibilucky/project2.git', branch: 'main'
+            echo "Checking out code from repository: https://github.com/sibilucky/my-spring-boot-app.git, branch: main"
+            git url: 'https://github.com/sibilucky/my-spring-boot-app.git', branch: 'main'
         }
 
         // Build the project
