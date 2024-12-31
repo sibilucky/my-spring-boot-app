@@ -1,20 +1,65 @@
-<dependencies>
-    <!-- Spring Boot Starter Web dependency -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <!-- Thymeleaf templating engine dependency -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-thymeleaf</artifactId>
-    </dependency>
+    <!-- Required version of the POM model -->
+    <modelVersion>4.0.0</modelVersion>
 
-    <!-- Spring Boot DevTools for automatic restarts and live reload -->
-    <dependency>
+    <!-- Group ID represents the group or organization that owns the project -->
+    <groupId>com.example</groupId>
+
+    <!-- Artifact ID is the unique name of the project -->
+    <artifactId>my-spring-boot-app</artifactId>
+
+    <!-- Version of the project -->
+    <version>1.0.0</version>
+
+    <!-- Parent project (Spring Boot) -->
+    <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-devtools</artifactId>
-        <scope>runtime</scope>
-    </dependency>
-</dependencies>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.0</version> <!-- Use the latest stable version -->
+        <relativePath/> <!-- Lookup parent from repository -->
+    </parent>
+
+    <!-- Properties for Maven build -->
+    <properties>
+        <java.version>11</java.version> <!-- Specify your Java version -->
+    </properties>
+
+    <!-- Dependencies section -->
+    <dependencies>
+        <!-- Spring Boot Starter Web dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Thymeleaf templating engine dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- Spring Boot DevTools for automatic restarts and live reload -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Build section (Optional, but commonly used for Spring Boot applications) -->
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
