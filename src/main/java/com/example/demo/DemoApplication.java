@@ -1,16 +1,13 @@
- package com.example.demo.controller;
+// src/main/java/com/example/demo/DemoApplication.java
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+package com.example.demo;
 
-@Controller
-public class HomeController {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-    @GetMapping("/")
-    public String home(Model model) {
-        // Adding a message to the model, which will be passed to the Thymeleaf template
-        model.addAttribute("message", "Hello, Welcome to My Spring Boot App!");
-        return "index"; // This corresponds to src/main/resources/templates/index.html
+@SpringBootApplication
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
     }
 }
