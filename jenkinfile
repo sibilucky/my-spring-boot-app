@@ -31,7 +31,7 @@ node {
         // Build the project
         stage('Build') {
             echo 'Building the project using Maven'
-            sh 'mvn clean install -DskipTests'
+            sh 'mvn clean install'
         }
 
         // Test the project
