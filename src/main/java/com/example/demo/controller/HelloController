@@ -1,6 +1,4 @@
-// src/main/java/com/example/demo/DemoApplication.java
-
-package com.example.demo;
+ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,12 +11,14 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
+}
 
-    @Controller
-    public class HomeController {
-        @GetMapping("/")
-        public String home() {
-            return "home";
-        }
+@Controller
+class HomeController {
+
+    @GetMapping("/")
+    public String home() {
+        // This will return the view "home.html" (You will need a home.html file in src/main/resources/templates)
+        return "home";
     }
 }
