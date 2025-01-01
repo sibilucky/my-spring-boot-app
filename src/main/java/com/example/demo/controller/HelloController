@@ -20,8 +20,14 @@ public class DemoApplication {
 @RestController
 class MyController {
 
+    @GetMapping("/")  // Add a mapping for the root URL
+    public String home() {
+        return "Welcome to the Spring Boot Application!";
+    }
+
     @GetMapping("/greet")
     public String greet() {
         return "Hello, I am Sibi!";
     }
 }
+ 
