@@ -1,24 +1,27 @@
- package com.example.demo;
+package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 public class DemoApplication {
-
     public static void main(String[] args) {
+        // Print the message "Hi, I am Sibi"
+        System.out.println("Hi, I am Sibi");
+        
+        // Run the Spring Boot application
         SpringApplication.run(DemoApplication.class, args);
     }
 }
 
-@Controller
-class HomeController {
+// Controller class to handle requests
+@RestController
+class MyController {
 
-    @GetMapping("/")
-    public String home() {
-        // This will return the view "home.html" (You will need a home.html file in src/main/resources/templates)
-        return "home";
+    @GetMapping("/greet")
+    public String greet() {
+        return "Hello, I am Sibi!";
     }
 }
