@@ -1,26 +1,7 @@
-package com.example.demo;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@SpringBootApplication
-public class DemoApplication {
-    public static void main(String[] args) {
-        // Print the message "Hi, I am Sibi"
-        System.out.println("Hi, I am Sibi");
-        
-        // Run the Spring Boot application
-        SpringApplication.run(DemoApplication.class, args);
-    }
-}
-
-// Controller class to handle requests
 @RestController
 class MyController {
 
-    @GetMapping("/")  // Add a mapping for the root URL
+    @GetMapping("/")  // Root URL Mapping
     public String home() {
         return "Welcome to the Spring Boot Application!";
     }
@@ -30,4 +11,4 @@ class MyController {
         return "Hello, I am Sibi!";
     }
 }
- 
+
